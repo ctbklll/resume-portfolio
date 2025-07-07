@@ -9,7 +9,6 @@
 }
 
 
-
 .hero{
     height: 100vh;
     width: 100%;
@@ -75,6 +74,7 @@ h1{
     margin: 20px 0px 20px;
     font-size: 60px;
 }
+
 h3{
     color: white;
     font-size: 25px;
@@ -95,6 +95,7 @@ h4{
 .img img{
     width: 100%;
     height: 350px;
+    width: 350px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.6); 
@@ -113,7 +114,7 @@ h4{
   
 }
 .about img{
-    height: auto;
+    height: 350px;
     width: 350px;
     border-radius: 50%;
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.6);
@@ -314,7 +315,7 @@ footer p:nth-child(2){
     justify-content: space-between;
     padding: 20px;
     margin-left: 400px;
-}
+} 
 
 .skills span {
     margin-right: 10px; 
@@ -365,4 +366,120 @@ footer p:nth-child(2){
     background-color: transparent;
     border: 2px solid rgba(0, 128, 255, 0.6);
     cursor: pointer;
+}
+
+/* ----------------------- Responsive Design ----------------------- */
+
+/* มือถือหน้าจอเล็ก */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 35px;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    padding: 30px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .img {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .img img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .main {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-text {
+    width: 90%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .skills-grid {
+    width: 90%;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer {
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .scroll-to-home-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* แท็บเล็ต */
+@media (max-width: 1024px) {
+  .img {
+    right: 50px;
+  }
+
+  .skills-grid {
+    width: 90%;
+    margin: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .about-text {
+    margin-left: 20px;
+  }
+}
+
+.message .p {
+    color: white;
 }
