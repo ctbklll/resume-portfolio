@@ -8,6 +8,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: black;
+}
 
 .hero{
     height: 100vh;
@@ -101,6 +104,13 @@ h4{
     box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.6); 
     transition: box-shadow 0.3s ease-in-out;
 }
+.img img,
+.about img {
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+}
+
 
 .img img:hover{
     transform: scale(1.1);
@@ -109,7 +119,7 @@ h4{
 
 .about{
     width: 100%;
-    padding: 100px 0px;
+    padding: 10px 0px;
     background-color: black;
   
 }
@@ -281,9 +291,11 @@ footer p:nth-child(2){
     font-size: 14px;
 }
 
+
 .Skill{
     background: black;
     text-align: center;
+    margin-top: 200px;
 }
 
 .section_text_p1{
@@ -368,10 +380,14 @@ footer p:nth-child(2){
     cursor: pointer;
 }
 
+.hamburger.i {
+    color: white;
+}
 /* ----------------------- Responsive Design ----------------------- */
 
 /* มือถือหน้าจอเล็ก */
-@media (max-width: 768px) {
+
+@media (max-width: 640px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -392,7 +408,7 @@ footer p:nth-child(2){
     font-size: 35px;
   }
 
-  .content {
+  .content { 
     position: static;
     transform: none;
     padding: 30px;
@@ -419,11 +435,17 @@ footer p:nth-child(2){
     width: 250px;
   }
 
-  .main {
-    flex-direction: column;
-    margin: 0;
+    .main {
+    width: 100%;
+    max-width: 1130px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-  }
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    }
+
 
   .about-text {
     width: 90%;
@@ -431,11 +453,18 @@ footer p:nth-child(2){
     text-align: center;
   }
 
-  .skills-grid {
-    width: 90%;
-    margin-left: 0;
+    .skills-grid {
+    background-color: transparent;
+    border: 2px solid rgba(0, 128, 255, 0.6);
+    max-width: 90%;
+    height: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    padding: 20px;
+    margin: auto;
+ }
 
   .box {
     flex-direction: column;
@@ -483,3 +512,11 @@ footer p:nth-child(2){
 .message .p {
     color: white;
 }
+
+.button-group {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
